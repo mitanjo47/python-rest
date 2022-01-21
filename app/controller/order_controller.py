@@ -1,13 +1,17 @@
-from flask import Blueprint
-from config import Config as cfg
+from flask_restx import Namespace, Resource, fields
 
-CTRL_MAP = f"{cfg.API_URL}/order"
-ctrl_order = Blueprint('order', __name__)
+api = Namespace('order', description='Order related operations')
 
-@ctrl_order.route(f"{CTRL_MAP}")
-def index():
-    return 'this is the index of order controller'
+order = api.model('Order', {
+    'id': fields.Integer(required=True, description='The order identifier'),
+    'name': fields.String(required=True, description='Description of the order'),
+})
 
-@ctrl_order.route(f"{CTRL_MAP}/test")
-def test_action():
-    return 'this is the test action of order controller'
+ORDERS = [
+    {'id': 1, 'name': 'Order #1'},
+]
+
+@api.route('/')
+class OrderController(Resource):
+    def get(self):
+        return ORDERS
