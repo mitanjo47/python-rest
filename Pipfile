@@ -8,6 +8,11 @@ nose = "*"
 flask = "*"
 python-dotenv = "*"
 flask-restx = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
 
 [dev-packages]
 

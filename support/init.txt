@@ -1,5 +1,11 @@
+### Boilerplate
 $ pipenv --python 3.8
 $ pipenv install nose
 $ pipenv install flask
 $ pipenv install flask-restx
 $ python install python-dotenv
+
+### Init db
+$ pipenv run flask db init
+$ pipenv run flask db migrate -m "create a model <model>"
+$ pipenv run flask db upgrade
