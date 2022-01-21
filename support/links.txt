@@ -1,0 +1,4 @@
+### Useful links about REST
+- https://flask-restx.readthedocs.io/en/latest/example.html
+- https://flask-restx.readthedocs.io/en/latest/quickstart.html#endpoints
+- https://flask-restx.readthedocs.io/en/latest/scaling.html

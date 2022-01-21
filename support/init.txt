@@ -1,0 +1,5 @@
+$ pipenv --python 3.8
+$ pipenv install nose
+$ pipenv install flask
+$ pipenv install flask-restx
+$ python install python-dotenv
